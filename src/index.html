@@ -1,117 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
 
-    <!-- link icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- tailwind -->
-     <link rel="stylesheet" href="/src/output.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/src/output.css">
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-800 font-sans mx-auto">
 
     <!-- Header -->
-    <header class="flex items-center gap-4 p-4 bg-white shadow">
-        <i class="fa-solid fa-book-open-reader text-3xl text-blue-600"></i>
-        <h2 class="text-2xl font-bold">Education</h2>
+    <header class="flex items-center justify-between flex-wrap p-4 bg-gray-400 shadow">
+        <!-- Logo and Title -->
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-book-open-reader text-3xl text-blue-600"></i>
+          <h2 class="text-2xl font-bold">Education</h2>
+        </div>
+        <!-- Navigation Links -->
+        <nav class="flex flex-wrap items-center gap-4 mt-4 md:mt-0">
+          <a href="#index" class="text-blue-600 hover:text-black px-4 py-2 rounded">Home</a>
+          <a href="/Home Page/about.html" class="text-blue-600  hover:text-black px-4 py-2 rounded">About</a>
+          <a href="/Home Page/courses.html" class="text-blue-600 hover:text-black px-4 py-2 rounded">Courses</a>
+          <a href="/Home Page/contect.html" class="text-blue-600 hover:text-black px-4 py-2 rounded">Content</a>
+        </nav>
+          <!-- Search and Buttons -->
+        <div class="flex items-center space-x-2 mt-4 md:mt-0">
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            class="border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 px-3 py-1 rounded w-48"
+          />
+          
+          <i class="fa-solid fa-magnifying-glass text-blue-600 dark:text-blue-400"></i>
+          
+          <button class="ml-2 bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-800">
+            Login
+          </button>
+          
+          <button class="bg-gray-600 text-white px-4 py-1 rounded  dark:bg-gray-700 dark:hover:bg-gray-900">
+            Signout
+          </button>
+        </div>
+
     </header>
-    <!-- Navigation -->
-    <nav class="flex flex-wrap items-center justify-between p-4 bg-white shadow-md">
-        <div class="space-x-4">
-        <a href="../Home Page/homepage.html" class="text-blue-600 hover:underline">Home</a>
-        <a href="../Home Page/about.html" class="text-blue-600 hover:underline">About</a>
-        <a href="../Home Page/courses.html" class="text-blue-600 hover:underline">Courses</a>
-        <a href="#content" class="text-blue-600 hover:underline">Content</a>
-        </div>
+    <!-- start main -->
+    <main class="bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 ">
+      <div class="grid grid-cols-12 h-auto">
+        <aside class="col-span-2">
+          <!-- item -->
+          <div class="space-y-2 px-5 py-4 ">
+            
+            <!-- Reusable clickable item -->
+            <button class="w-full flex items-center gap-5 text-slate-500 dark:text-gray-300 hover:text-blue-600 hover:bg-gray-100 dark:hover:text-blue-400 dark: px-3 py-2 rounded-md transition">
+              <i class="fa-solid fa-user-group"></i>
+              <p>Group People</p>
+            </button>
 
-        <div class="flex items-center space-x-2 mt-2 md:mt-0">
-        <input type="text" placeholder="Search..." class="border border-gray-300 px-3 py-1 rounded w-48" />
-        <i class="fa-solid fa-magnifying-glass text-blue-600"></i>
+            <button class="w-full flex items-center gap-5 text-slate-500 dark:text-gray-300 hover:text-blue-600 hover:bg-gray-100 dark:hover:text-blue-400 dark: px-3 py-2 rounded-md transition">
+              <i class="fa-solid fa-layer-group"></i>
+              <p>Design Group</p>
+            </button>
 
-        <button class="ml-4 bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-700">Login</button>
-        <button class="bg-gray-500 text-white px-4 py-1 rounded hover:bg-gray-700">Signout</button>
-        </div>
-    </nav>
-    <!-- Main Content -->
-    <main >
-        <section class=" bg-white py-16 px-6 lg:px-20 flex flex-col-reverse lg:cols-2 items-center justify-between">
-            <!-- Left Content -->
-            <div class="max-w-xl text-center lg:text-left">
-                <!-- <p class="text-sm uppercase text-gray-500">This About page</p> -->
-                <h1 class="text-4xl font-bold text-gray-900 leading-tight">
-                    Home Page Education Platform<br>
-                    <span class="text-indigo-600">in Cambodia platform.</span>
+            <button class="w-full flex items-center gap-5 text-slate-500 dark:text-gray-300 hover:text-blue-600 hover:bg-gray-100 dark:hover:text-blue-400 dark: px-3 py-2 rounded-md transition">
+              <i class="fa-solid fa-briefcase"></i>
+              <p>Jobs</p>
+            </button>
+
+          </div>
+        </aside>
+
+        <article class="col-span-10">
+          <div class="relative w-full">
+            <!-- Background Image -->
+              <img src="https://startupsmagazine.co.uk/sites/default/files/2021-06/AdobeStock_280706779.jpg" alt="img_homepage" 
+              class="w-full h-[500px] object-cover"/>
+            <!-- Text Overlay -->
+            <section class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-10 bg-black/70">
+              <div class="max-w-2xl">
+                <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                  Education Platform For Technology
+                  <span class="text-indigo-600">in Cambodia.</span>
                 </h1>
-                <p class="text-gray-600 mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                <p class="text-white mt-4 text-base sm:text-lg">
+                  Welcome everyone went you go to learn about technology in this course with me.
                 </p>
-                <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <button class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
+                <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                  <button class="bg-indigo-500 text-white px-6 py-2 rounded hover:bg-indigo-700 transition">
                     Enroll Now
-                    </button>
-                    <button class="border border-indigo-600 text-indigo-600 px-6 py-2 rounded hover:bg-indigo-50 transition">
-                    Buy Course
-                    </button>
+                  </button>
+                  <button class="border border-white text-white px-6 py-2 rounded hover:bg-white hover:text-indigo-600 transition">
+                    Free Course
+                  </button>
                 </div>
-                <div>
-                    <img class="" src="https://cdn.careeronestop.org/ClusterVids/education-and-training-overview.jpg" alt="">
-
-                </div>
+              </div>
+            </section>
+          </div>
+          <section class="bg-white border border-gray-200 py-16 px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20 dark:bg-gray-800 dark:border-gray-700">
+            <!-- Left Image -->
+            <div class="relative w-full lg:w-1/2 flex justify-center">
+              <img 
+                src="https://static.vecteezy.com/system/resources/thumbnails/024/269/342/small_2x/graduation-cap-with-earth-globe-concept-of-global-business-study-abroad-educational-back-to-school-education-in-global-world-study-abroad-business-in-universities-in-worldwide-language-study-photo.jpg" 
+                alt="Kid Learning" 
+                class="rounded-lg"
+              />
             </div>
-        </section>
-        
-        
-    </main>
-    
+            <!-- Right Content -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug dark:text-white">
+                Home Page Education Platform<br>
+                <span class="text-indigo-600">in Cambodia platform.</span>
+              </h1>
+              <p class="text-gray-600 mt-4 text-base md:text-lg dark:text-gray-200">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              </p>
+            </div>
+          </section>
+          <section class="bg-white border border-gray-200 py-16 px-6 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20 dark:bg-gray-800 dark:border-gray-700">
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-snug dark:text-white">
+                Education Platform<br>
+                <span class="text-indigo-600">in Cambodia platform.</span>
+              </h1>
+              <p class="text-gray-600 mt-4 text-base md:text-lg dark:text-gray-200">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              </p>
+            </div>
+            <!-- Right Image -->
+            <div class="relative w-full lg:w-1/2 flex justify-center">
+              <img 
+                src="https://static.vecteezy.com/system/resources/thumbnails/024/269/342/small_2x/graduation-cap-with-earth-globe-concept-of-global-business-study-abroad-educational-back-to-school-education-in-global-world-study-abroad-business-in-universities-in-worldwide-language-study-photo.jpg" 
+                alt="Kid Learning" 
+                class="rounded-lg"
+              />
+            </div>
+          </section>
 
-    <footer class="bg-white dark:bg-gray-900">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                        </li>
-                        <li>
-                            <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                        </li>
-                    </ul>
+          <!-- Course Cards Grid -->
+          <section class=" px-6 pb-20">
+              <h2 class="text-3xl font-bold mb-6 text-center">Our Courses</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                  <!-- start card -->
+                    <!-- Card 1 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://images.shiksha.com/mediadata/images/articles/1709809634phpvw3Yez.jpeg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Database Courses Overview</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                          </div>
+                      </div>
+                    <!--Card 2 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://www.creativeitinstitute.com/images/course/course_1674371266.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Front End Development With React</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                          </div>
+                      </div>
+                      <!-- Card 3 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/sites/2147591000/images/kbN4A0GPTNGOna0NjzxY_file.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Figma UI/UX Design</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>   
+                          </div>
+                      </div>
+                    <!--Card 4 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://miro.medium.com/v2/resize:fit:2558/1*rAnAMmvA6FmPcCf8h16Lvg.jpeg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Front End Development</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>                            
+                          </div>
+                      </div>
+                    <!-- Card 5 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Backend_Developer.PNG" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Backend Development</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>                            
+                          </div>
+                      </div>
+                    <!--Card 6 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://www.lagosdataschool.com/wp-content/uploads/2022/12/Python-training-in-Ikeja-Lagos-Nigeria.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Data Analysis with Python</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>                           
+                          </div>
+                      </div>
+                    <!-- Card 7 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                              <img class="rounded-t-lg" src="https://cacm.acm.org/wp-content/uploads/2025/01/012225.BLOG_.21st-Century-C-G.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Figma UI/UX Design</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>                           
+                          </div>
+                      </div>
+                    <!--Card 8 -->
+                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                            <img class="rounded-t-lg" src="https://www.tatvasoft.com/blog/wp-content/uploads/2022/07/Why-Use-React-1280x720.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Front End Development</h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>                          
+                          </div>
+                      </div>
+                  <!-- end card -->
                 </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                        </li>
-                    </ul>
-                </div>
-            
+          </section>        
+        </article> 
+      </div>
+    </main>  
+    <!-- end main -->
+<!-- Card 9  -->
+                      <!-- <aside class="bg-white shadow-md p-6 rounded-lg">
+                        <img src="https://www.creativeitinstitute.com/images/course/course_1674371266.jpg" alt="HTML Basics" class="rounded mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold mb-2">HTML Basics</h3>
+                        <p class="text-gray-700 text-sm">Learn the foundation of every web page with semantic HTML5.</p>
+                      </aside> -->
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 pt-0">
+      <div class="max-w-screen-xl mx-auto px-4 py-6 lg:py-8 text-center">
+        
+        <!-- Top Footer Links -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-6">
+          
+          <!-- Resources -->
+          <div>
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+              <li><a href="https://flowbite.com/" class="hover:underline">Flowbite</a></li>
+              <li><a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a></li>
+            </ul>
+          </div>
+
+          <!-- Follow Us -->
+          <div>
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+              <li><a href="https://github.com/themesberg/flowbite" class="hover:underline">Github</a></li>
+              <li><a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium space-y-2">
+              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div class="sm:flex sm:items-center ">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://web.facebook.com/12Vanna" class="hover:underline">Thy Vanna</a>. All Rights Reserved.
-            </span>
-            
+
+        <!-- Divider -->
+        <hr class="border-gray-200 dark:border-gray-700 mb-6" />
+
+        <!-- Bottom Text -->
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+          © 2025 <a href="https://web.facebook.com/12Vanna" class="hover:underline">Thy Vanna</a>. All Rights Reserved. Created with Tailwind CSS.
         </div>
-        </div>
+      </div>
     </footer>
+    <!-- end footer -->
 
 </body>
 </html>
